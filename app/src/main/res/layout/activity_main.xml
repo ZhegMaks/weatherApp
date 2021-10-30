@@ -31,8 +31,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
+<<<<<<< HEAD
         android:ems="9"
         android:hint="Введи город"
+=======
+        android:contentDescription="Введи город"
+        android:ems="10"
+>>>>>>> e2fd5e7f5c4dd82976a5c530666d6c0cbe8e6b9c
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/getWButton"
         app:layout_constraintEnd_toEndOf="@+id/getWButton"
@@ -40,6 +45,7 @@
         app:layout_constraintStart_toStartOf="@+id/getWButton"
         tools:text="Введи город" />
 
+<<<<<<< HEAD
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -50,4 +56,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+=======
+>>>>>>> e2fd5e7f5c4dd82976a5c530666d6c0cbe8e6b9c
 </androidx.constraintlayout.widget.ConstraintLayout>
