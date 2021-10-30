@@ -25,59 +25,40 @@
 15    <uses-permission android:name="android.permission.SEND_SMS" />
 15-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:5-67
 15-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:22-64
-16    <uses-permission android:name="android.permission.INTERNET" />
-16-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:4:5-67
-16-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:4:22-64
-17    <uses-permission android:name="android.permission.READ_CONTACTS" />
-17-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:5:5-72
-17-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:5:22-69
-18    <uses-permission android:name="android.permission.BLUETOOTH" />
-18-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:6:5-68
-18-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:6:22-65
-19    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-19-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:14:5-79
-19-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:14:22-76
-20    <uses-permission android:name="android.permission.CAMERA" />
-20-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:7:5-65
-20-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:7:22-62
-21    <uses-permission android:name="android.permission.SEND_SMS" />
-21-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:5-67
-21-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:22-64
-22
-23    <application
-23-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:17:5-34:19
-24        android:allowBackup="true"
-24-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:18:9-35
-25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-25-->[androidx.core:core:1.5.0] C:\Users\zhegm\.gradle\caches\transforms-3\255d63c0f9f8f5d12ab3191ffb377750\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:19:9-43
-27        android:label="@string/app_name"
-27-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:20:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:21:9-54
-29        android:supportsRtl="true"
-29-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:22:9-35
-30        android:testOnly="true"
-31        android:theme="@style/Theme.WeatherApp" >
-31-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:23:9-48
-32        <activity
-32-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:25:9-33:20
-33            android:name="com.example.weatherapp.MainActivity"
-33-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:26:13-41
-34            android:exported="true" >
-34-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:27:13-36
-35            <intent-filter>
-35-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:28:13-32:29
-36                <action android:name="android.intent.action.MAIN" />
-36-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:29:17-69
-36-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:29:25-66
-37
-38                <category android:name="android.intent.category.LAUNCHER" />
-38-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:31:17-77
-38-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:31:27-74
-39            </intent-filter>
-40        </activity>
-41    </application>
-42
-43</manifest>
+16
+17    <application
+17-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:10:5-27:19
+18        android:allowBackup="true"
+18-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:11:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.5.0] C:\Users\zhegm\.gradle\caches\transforms-3\255d63c0f9f8f5d12ab3191ffb377750\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:12:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:13:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:14:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:15:9-35
+24        android:theme="@style/Theme.WeatherApp" >
+24-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:16:9-48
+25        <activity
+25-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:18:9-26:20
+26            android:name="com.example.weatherapp.MainActivity"
+26-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:19:13-41
+27            android:exported="true" >
+27-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:20:13-36
+28            <intent-filter>
+28-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:21:13-25:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:22:17-69
+29-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:22:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:24:17-77
+31-->C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:24:27-74
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>
