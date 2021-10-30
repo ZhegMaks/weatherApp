@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 } catch (IOException | NullPointerException e) {
                     e.printStackTrace();
-                    new sendMessage("Введи город!");
+                    new sendMessage("Введенный город возможно неверный!");
                 }
             }
         };
