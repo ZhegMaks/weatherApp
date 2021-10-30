@@ -14,7 +14,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5671b3fb-3755-4ccc-b69c-9d989d5d6809" name="Default Changelist" comment="0.0.1.8a">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/weatherapp/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/weatherapp/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +34,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1ywcJGnxye7AiFE1TQRsH5b5yKa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -165,7 +166,28 @@
       <option name="project" value="LOCAL" />
       <updated>1635604938877</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Merge branch 'master' of https://github.com/ZhegMaks/weatherApp&#10;&#10;# Conflicts:&#10;#&#9;.idea/.gitignore&#10;#&#9;app/src/main/AndroidManifest.xml&#10;#&#9;app/src/main/java/com/example/weatherapp/MainActivity.java&#10;#&#9;app/src/main/res/layout/activity_main.xml&#10;#&#9;app/src/main/res/values/strings.xml&#10;#&#9;app/src/main/res/values/themes.xml">
+      <created>1635606054756</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1635606054756</updated>
+    </task>
+    <task id="LOCAL-00008" summary="0.0.1.8a">
+      <created>1635606902030</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1635606902030</updated>
+    </task>
+    <task id="LOCAL-00009" summary="0.0.1.8a">
+      <created>1635606980141</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1635606980141</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -183,6 +205,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <MESSAGE value="0.0.1a" />
+    <MESSAGE value="Merge branch 'master' of https://github.com/ZhegMaks/weatherApp&#10;&#10;# Conflicts:&#10;#&#9;.idea/.gitignore&#10;#&#9;app/src/main/AndroidManifest.xml&#10;#&#9;app/src/main/java/com/example/weatherapp/MainActivity.java&#10;#&#9;app/src/main/res/layout/activity_main.xml&#10;#&#9;app/src/main/res/values/strings.xml&#10;#&#9;app/src/main/res/values/themes.xml" />
     <MESSAGE value="0.0.1.8a" />
     <option name="LAST_COMMIT_MESSAGE" value="0.0.1.8a" />
   </component>

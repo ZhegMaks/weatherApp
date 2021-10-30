@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     TextView weatherText;
     EditText inputText;
     String oldValue;
-    final String TOKEN = ""; // токен API openweathermap.org
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -122,7 +121,6 @@ public class MainActivity extends AppCompatActivity {
 
     public class sendMessage {
         private String text;
-
         sendMessage(String text) {
             this.text = text;
             runOnUiThread(new Runnable() {
