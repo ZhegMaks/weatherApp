@@ -1,11 +1,10 @@
+com/example/weatherapp/BuildConfig.java
+ com.example.weatherapp.BuildConfig
 com/example/weatherapp/MainActivity.java
  com.example.weatherapp.MainActivity
  com.example.weatherapp.MainActivity$1
- com.example.weatherapp.MainActivity$1$1
- com.example.weatherapp.MainActivity$1$2
- com.example.weatherapp.MainActivity$1$3
  com.example.weatherapp.MainActivity$2
  com.example.weatherapp.MainActivity$fields
  com.example.weatherapp.MainActivity$getFields
-com/example/weatherapp/BuildConfig.java
- com.example.weatherapp.BuildConfig
+ com.example.weatherapp.MainActivity$sendMessage
+ com.example.weatherapp.MainActivity$sendMessage$1

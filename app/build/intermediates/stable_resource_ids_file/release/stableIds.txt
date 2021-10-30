@@ -622,6 +622,7 @@ com.example.weatherapp:string/abc_shareactionprovider_share_with_application = 0
 com.example.weatherapp:string/abc_searchview_description_voice = 0x7f0e0017
 com.example.weatherapp:string/abc_searchview_description_submit = 0x7f0e0016
 com.example.weatherapp:string/abc_searchview_description_clear = 0x7f0e0013
+com.example.weatherapp:string/token = 0x7f0e006a
 com.example.weatherapp:string/abc_search_hint = 0x7f0e0012
 com.example.weatherapp:attr/contentPadding = 0x7f0300f1
 com.example.weatherapp:string/abc_prepend_shortcut_label = 0x7f0e0011

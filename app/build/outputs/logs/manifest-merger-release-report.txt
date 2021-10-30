@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zhegm\.gradle\caches\transforms-3\25012fcc08d4c5cf5a2844c1a21a6fbe\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\zhegm\.gradle\caches\transforms-3\81808270a5cc0559f2b9db87cb315b87\transformed\constraintlayout-2.1.1\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\zhegm\.gradle\caches\transforms-3\4ecd700c773cf5624732e3577602f1ea\transformed\appcompat-1.3.1\AndroidManifest.xml:17:1-24:12
@@ -39,49 +39,49 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\zhegm\.gradle\ca
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\zhegm\.gradle\caches\transforms-3\8ca7186ef83368b8549809152ed428ce\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\zhegm\.gradle\caches\transforms-3\485578c608519582fc751ff2f7c88476\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\zhegm\.gradle\caches\transforms-3\18e5cb54f886f7aa7e26ad4e22b3ac23\transformed\jetified-annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
-INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
+INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
+INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
 	package
 		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:3:5-37
 		INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
 		INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-29:12
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:1-36:12
 		INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:5:5-67
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:4:5-67
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:5:22-64
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:4:22-64
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:6:5-72
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:5:5-72
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:6:22-69
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:5:22-69
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:7:5-68
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:6:5-68
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:7:22-65
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:5-79
-	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:22-76
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:6:22-65
 uses-permission#android.permission.CAMERA
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:9:5-65
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:7:5-65
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:9:22-62
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:7:22-62
 uses-permission#android.permission.SEND_SMS
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:10:5-67
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:5-67
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:10:22-64
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:8:22-64
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:14:22-76
 application
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:11:5-27:19
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:17:5-34:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zhegm\.gradle\caches\transforms-3\25012fcc08d4c5cf5a2844c1a21a6fbe\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\zhegm\.gradle\caches\transforms-3\25012fcc08d4c5cf5a2844c1a21a6fbe\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.1] C:\Users\zhegm\.gradle\caches\transforms-3\81808270a5cc0559f2b9db87cb315b87\transformed\constraintlayout-2.1.1\AndroidManifest.xml:9:5-20
@@ -93,33 +93,33 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\zh
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\zhegm\.gradle\caches\transforms-3\255d63c0f9f8f5d12ab3191ffb377750\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:20:9-41
 	android:roundIcon
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:15:9-54
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:21:9-54
 	android:icon
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:19:9-43
 	android:allowBackup
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:18:9-35
 	android:theme
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:17:9-48
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:23:9-48
 activity#com.example.weatherapp.MainActivity
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:18:9-26:20
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:25:9-33:20
 	android:exported
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:20:13-36
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:19:13-41
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:26:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml:31:27-74
 uses-sdk
 INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\zhegm\AndroidStudioProjects\weatherApp\app\src\main\AndroidManifest.xml
