@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">weatherApp</string>
     <string name="copyright">Данные предоставлены OpenWeather ®</string>
-    <string name="token"></string>
+    <string name="token">815ac3c907f08b60c2565fbb56cd0711</string>
 </resources>

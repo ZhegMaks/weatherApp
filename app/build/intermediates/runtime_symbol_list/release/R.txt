@@ -2445,8 +2445,12 @@ int layout text_view_with_line_height_from_layout 0x7f0b006d
 int layout text_view_with_line_height_from_style 0x7f0b006e
 int layout text_view_with_theme_line_height 0x7f0b006f
 int layout text_view_without_line_height 0x7f0b0070
-int mipmap ic_launcher 0x7f0c0000
-int mipmap ic_launcher_round 0x7f0c0001
+int mipmap back 0x7f0c0000
+int mipmap back_foreground 0x7f0c0001
+int mipmap back_round 0x7f0c0002
+int mipmap background 0x7f0c0003
+int mipmap ic_launcher 0x7f0c0004
+int mipmap ic_launcher_round 0x7f0c0005
 int plurals mtrl_badge_content_description 0x7f0d0000
 int string abc_action_bar_home_description 0x7f0e0000
 int string abc_action_bar_up_description 0x7f0e0001

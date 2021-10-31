@@ -1,21 +1,18 @@
 package com.example.weatherapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.EditText;
-
 import com.google.gson.Gson;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.IOException;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     Button getWeather;
@@ -39,12 +36,10 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     String inputString = inputText.getText().toString();
-
                     if (inputString.equals(oldValue)) { // против клацания
                         return;
                     }
-
-                    String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s", inputString, TOKEN_API); // в аргументах указываем введенный город и токен
+                    String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&lang=ru", inputString, TOKEN_API); // в аргументах указываем введенный город и токен
                     URL obj = new URL(url);
                     HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
                     connection.setRequestMethod("POST");
@@ -68,17 +63,22 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         String cloudsText = "";
                         int clouds = Integer.valueOf(fields.clouds.getClouds());
-                        if (clouds < 10) {
+                        if (clouds <= 15) {
                             cloudsText = "Безоблачно";
                         } else if (clouds < 40) {
-                            cloudsText = "Слабая облачность";
+                            cloudsText = "Переменная облачность";
                         } else if (clouds < 70) {
                             cloudsText = "Средняя облачность";
                         } else if (clouds > 70) {
                             cloudsText = "Пасмурно";
                         }
-                        new sendMessage("Погода в городе " + inputString + " " + String.format("%.0f", temp) + "°C" + "\nВлажность воздуха: " + fields.main.getHumidity() + "%\n" + cloudsText);
+                        new sendMessage("Погода в городе " +
+                                inputString + " " +
+                                String.format("%.0f", temp) + "°C" +
+                                "\nВлажность воздуха: " + fields.main.getHumidity() +
+                                "%\n" + cloudsText + "\nОсадки: " + fields.weather[0].getPrecipitation());
                         oldValue = inputString;
+
                     }
                 } catch (IOException | NullPointerException e) {
                     e.printStackTrace();
@@ -99,24 +99,28 @@ public class MainActivity extends AppCompatActivity {
     public class getFields {
         private fields main;
         private fields clouds;
+        private fields[] weather;
     }
 
     public class fields {
         private String temp; // Температура воздуха
         private String humidity; // Влажность
         private String all; // Облачность
+        private String description; // осадки
 
         private String getTemp() {
             return temp;
         }
 
-        public String getHumidity() {
+        private String getHumidity() {
             return humidity;
         }
 
         private String getClouds() {
             return all;
         }
+
+        private String getPrecipitation() { return description; }
     }
 
     public class sendMessage {
