@@ -483,6 +483,43 @@ library {
 }
 library {
   maven_library {
+    groupId: "androidx.browser"
+    artifactId: "browser"
+    version: "1.3.0"
+  }
+  digests {
+    sha256: "\347@\261\276\352\310#\003A]h\276\351\325\301\362YqoV\n\202\234\240||\351~`\205\016\033"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "androidx.concurrent"
+    artifactId: "concurrent-futures"
+    version: "1.0.0"
+  }
+  digests {
+    sha256: "U\225\244\016\'\212{9\372x\240\224\220\343\327\363\372\251\\{\001DqH\2758\265\255\340`\\5"
+  }
+  repo_index {
+  }
+}
+library {
+  maven_library {
+    groupId: "com.google.guava"
+    artifactId: "listenablefuture"
+    version: "1.0"
+  }
+  digests {
+    sha256: "\344\255v\a\345\300G|o\211\016\362jI\313\215\033\264\337\373e\v\253E\002\257\356ddN0i"
+  }
+  repo_index {
+    value: 1
+  }
+}
+library {
+  maven_library {
     groupId: "org.jsoup"
     artifactId: "jsoup"
     version: "1.8.1"
@@ -748,13 +785,28 @@ library_dependencies {
   library_dep_index: 2
   library_dep_index: 8
 }
+library_dependencies {
+  library_index: 40
+  library_dep_index: 8
+  library_dep_index: 41
+  library_dep_index: 25
+  library_dep_index: 2
+  library_dep_index: 1
+  library_dep_index: 42
+}
+library_dependencies {
+  library_index: 41
+  library_dep_index: 42
+  library_dep_index: 1
+}
 module_dependencies {
   module_name: "base"
   dependency_index: 0
   dependency_index: 27
   dependency_index: 30
   dependency_index: 40
-  dependency_index: 41
+  dependency_index: 43
+  dependency_index: 44
 }
 repositories {
   maven_repo {

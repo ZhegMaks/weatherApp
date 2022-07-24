@@ -2,6 +2,7 @@ package com.example.weatherapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -12,6 +13,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,66 +25,59 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         getWeather = findViewById(R.id.getWButton); // Кнопка получения погоды
         weatherText = findViewById(R.id.weather); // Текст, который изменяется для вывода погоды
         inputText = findViewById(R.id.editcity); // Текст из поля
-
-        final String TOKEN_API = getString(R.string.token); // токен API openweathermap.org
-
+        String TOKEN_API = getString(R.string.token); // токен API openweathermap.org
+        GetWeather GetWeather = new GetWeather();
         Runnable json_parse = new Runnable() {
             @Override
             public void run() {
                 try {
+                    String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&lang=ru", inputText.getText().toString(), TOKEN_API); // в аргументах указываем введенный город и токен
                     String inputString = inputText.getText().toString();
-                    if (inputString.equals(oldValue)) { // против клацания
+
+                    HashMap<String, String> getData = GetWeather.WeatherFromApi(url);
+                    Float getCloudiness = Float.valueOf(getData.get("all"));
+                    Float getTemp = Float.valueOf(getData.get("temp"));
+                    String getDescription = String.valueOf(getData.get("description"));
+                    Integer getHumidity = Integer.valueOf(getData.get("humidity"));
+
+                    if (inputString.equals(oldValue)) {
                         return;
                     }
-                    String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&lang=ru", inputString, TOKEN_API); // в аргументах указываем введенный город и токен
-                    URL obj = new URL(url);
-                    HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
-                    connection.setRequestMethod("POST");
-                    BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-                    String inputLine;
-                    StringBuffer response = new StringBuffer();
-
-                    while ((inputLine = in.readLine()) != null) {
-                        response.append(inputLine);
-                    }
-
-                    in.close();
-                    Gson gson = new Gson();
-                    getFields fields = gson.fromJson(String.valueOf(response), getFields.class);
-                    System.out.println(response);
-                    Float temp = Float.valueOf(fields.main.getTemp()) - 273.15f; // Кельвины -> Цельсии
-
                     if (inputString.isEmpty()) {
-                        new sendMessage("Введи город!");
+                        new resultLabel("Введи город!");
                         // sleep(100);
                     } else {
                         String cloudsText = "";
-                        int clouds = Integer.valueOf(fields.clouds.getClouds());
-                        if (clouds <= 15) {
+
+                        if (getCloudiness <= 15) {
                             cloudsText = "Безоблачно";
-                        } else if (clouds < 40) {
+                        } else if (getCloudiness < 40) {
                             cloudsText = "Переменная облачность";
-                        } else if (clouds < 70) {
+                        } else if (getCloudiness < 70) {
                             cloudsText = "Средняя облачность";
-                        } else if (clouds > 70) {
+                        } else if (getCloudiness > 70) {
                             cloudsText = "Пасмурно";
                         }
-                        new sendMessage("Погода в городе " +
+                        new resultLabel("Погода в городе " +
                                 inputString + " " +
-                                String.format("%.0f", temp) + "°C" +
-                                "\nВлажность воздуха: " + fields.main.getHumidity() +
-                                "%\n" + cloudsText + "\nОсадки: " + fields.weather[0].getPrecipitation());
+                                String.format("%.0f", getTemp) + "°C" +
+                                "\nВлажность воздуха: " + getHumidity +
+                                "%\n" + cloudsText +
+                                "\nОсадки: " + getDescription);
                         oldValue = inputString;
-
                     }
-                } catch (IOException | NullPointerException e) {
+                } catch (NullPointerException e) {
                     e.printStackTrace();
-                    new sendMessage("Введенный город возможно неверный!");
+                    new resultLabel("Введенный город возможно неверный!");
+                } catch (NumberFormatException e) {
+                    e.printStackTrace();
+                    new resultLabel("number " + e);
                 }
             }
         };
@@ -90,42 +85,20 @@ public class MainActivity extends AppCompatActivity {
         getWeather.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Thread t1 = new Thread(json_parse);
-                t1.start();
+                try {
+                    Thread t1 = new Thread(json_parse);
+                    t1.start();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
 
-    public class getFields {
-        private fields main;
-        private fields clouds;
-        private fields[] weather;
-    }
-
-    public class fields {
-        private String temp; // Температура воздуха
-        private String humidity; // Влажность
-        private String all; // Облачность
-        private String description; // осадки
-
-        private String getTemp() {
-            return temp;
-        }
-
-        private String getHumidity() {
-            return humidity;
-        }
-
-        private String getClouds() {
-            return all;
-        }
-
-        private String getPrecipitation() { return description; }
-    }
-
-    public class sendMessage {
+    // Изменения текста с результатами погоды
+    public class resultLabel {
         private String text;
-        sendMessage(String text) {
+        resultLabel(String text) {
             this.text = text;
             runOnUiThread(new Runnable() {
                 @Override
