@@ -1,7 +1,10 @@
 package com.example.weatherapp;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +13,11 @@ import android.widget.EditText;
 import androidx.annotation.Nullable;
 import androidx.browser.trusted.Token;
 import android.widget.EditText;
+import android.widget.TextView;
+
 import com.google.gson.Gson;
+
+import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -25,9 +32,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GetWeather{
+public class GetWeather {
     public static GetWeather instance;
 
+    public static GetWeather getInstance(){
+        if(instance == null){		//если объект еще не создан
+            instance = new GetWeather();	//создать новый объект
+        }
+        return instance;		// вернуть ранее созданный объект
+    }
     public GetWeather() {
 
     }
@@ -49,17 +62,14 @@ public class GetWeather{
             in.close();
 
             getFields fields = gson.fromJson(String.valueOf(response), getFields.class);
-            float temps = Float.valueOf(fields.main.getTemp()) - Float.valueOf(273.15f); // -> перевод в цельсии
+            float temps = Float.valueOf(fields.main.getTemp()) - 273.15f ; // -> перевод в цельсии
             // положим в наши хэши температуру, влажность, облачность, осадки
             results.put("temp", String.valueOf(temps)); // температура
             results.put("humidity", fields.main.getHumidity()); // влажность
-            results.put("all", fields.main.getHumidity()); // облачность
+            results.put("all", fields.clouds.getClouds()); // облачность
             results.put("description", fields.weather[0].getPrecipitation()); // осадки
+            System.out.println(results);
             return results;
-        } catch (ProtocolException e) {
-            e.printStackTrace();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -94,10 +104,12 @@ public class GetWeather{
         private String getPrecipitation() { return description; }
     }
 
-    public static GetWeather getInstance(){
-        if(instance == null){		//если объект еще не создан
-            instance = new GetWeather();	//создать новый объект
+    // Изменения текста с результатами погоды
+    public void resultLabel(TextView resultText, String text) {
+
+            resultText.setText(text);
         }
-        return instance;		// вернуть ранее созданный объект
+
     }
-}
+
+

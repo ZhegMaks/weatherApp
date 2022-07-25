@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         weatherText = findViewById(R.id.weather); // Текст, который изменяется для вывода погоды
         inputText = findViewById(R.id.editcity); // Текст из поля
         String TOKEN_API = getString(R.string.token); // токен API openweathermap.org
-        GetWeather GetWeather = new GetWeather();
         Runnable json_parse = new Runnable() {
             @Override
             public void run() {
@@ -40,17 +39,24 @@ public class MainActivity extends AppCompatActivity {
                     String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&lang=ru", inputText.getText().toString(), TOKEN_API); // в аргументах указываем введенный город и токен
                     String inputString = inputText.getText().toString();
 
-                    HashMap<String, String> getData = GetWeather.WeatherFromApi(url);
+                    HashMap<String, String> getData = GetWeather.getInstance().WeatherFromApi(url);
                     Float getCloudiness = Float.valueOf(getData.get("all"));
                     Float getTemp = Float.valueOf(getData.get("temp"));
                     String getDescription = String.valueOf(getData.get("description"));
                     Integer getHumidity = Integer.valueOf(getData.get("humidity"));
+                    System.out.println(getTemp);
 
                     if (inputString.equals(oldValue)) {
                         return;
                     }
                     if (inputString.isEmpty()) {
-                        new resultLabel("Введи город!");
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                GetWeather.getInstance().resultLabel(weatherText ,"Введи город!");
+                            }
+                        });
+
                         // sleep(100);
                     } else {
                         String cloudsText = "";
@@ -64,20 +70,23 @@ public class MainActivity extends AppCompatActivity {
                         } else if (getCloudiness > 70) {
                             cloudsText = "Пасмурно";
                         }
-                        new resultLabel("Погода в городе " +
-                                inputString + " " +
-                                String.format("%.0f", getTemp) + "°C" +
-                                "\nВлажность воздуха: " + getHumidity +
-                                "%\n" + cloudsText +
-                                "\nОсадки: " + getDescription);
+                        String finalCloudsText = cloudsText;
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                GetWeather.getInstance().resultLabel(weatherText, String.format("Погода в городе %s\n%.0f °C\nВлажность воздуха %d\n%s\nОсадки: %s", inputString, getTemp, getHumidity, finalCloudsText, getDescription));
+                            }
+                        });
+
                         oldValue = inputString;
                     }
-                } catch (NullPointerException e) {
+                } catch (Exception e) {
                     e.printStackTrace();
-                    new resultLabel("Введенный город возможно неверный!");
-                } catch (NumberFormatException e) {
-                    e.printStackTrace();
-                    new resultLabel("number " + e);
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            GetWeather.getInstance().resultLabel(weatherText, "Введенный город возможно неверный!");
+                        }});
                 }
             }
         };
@@ -93,20 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
-    }
-
-    // Изменения текста с результатами погоды
-    public class resultLabel {
-        private String text;
-        resultLabel(String text) {
-            this.text = text;
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    weatherText.setText(text);
-                }
-            });
-        }
     }
 }
 

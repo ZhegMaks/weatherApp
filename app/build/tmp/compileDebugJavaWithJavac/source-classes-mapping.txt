@@ -9,6 +9,7 @@ com/example/weatherapp/GetWeather.java
 com/example/weatherapp/MainActivity.java
  com.example.weatherapp.MainActivity
  com.example.weatherapp.MainActivity$1
+ com.example.weatherapp.MainActivity$1$1
+ com.example.weatherapp.MainActivity$1$2
+ com.example.weatherapp.MainActivity$1$3
  com.example.weatherapp.MainActivity$2
- com.example.weatherapp.MainActivity$resultLabel
- com.example.weatherapp.MainActivity$resultLabel$1
