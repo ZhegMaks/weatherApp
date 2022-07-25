@@ -68,7 +68,6 @@ public class GetWeather {
             results.put("humidity", fields.main.getHumidity()); // влажность
             results.put("all", fields.clouds.getClouds()); // облачность
             results.put("description", fields.weather[0].getPrecipitation()); // осадки
-            System.out.println(results);
             return results;
         } catch (IOException e) {
             e.printStackTrace();
@@ -106,10 +105,7 @@ public class GetWeather {
 
     // Изменения текста с результатами погоды
     public void resultLabel(TextView resultText, String text) {
-
             resultText.setText(text);
         }
-
     }
-
 
