@@ -36,50 +36,46 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
 
-                        }
-                    });
                     String url = String.format("https://api.openweathermap.org/data/2.5/weather?q=%s&appid=%s&lang=ru", inputText.getText().toString(), TOKEN_API); // в аргументах указываем введенный город и токен
                     String inputString = inputText.getText().toString();
 
-                    HashMap<String, String> getData = GetWeather.getInstance().WeatherFromApi(url);
-                    Float getCloudiness = Float.valueOf(getData.get("all"));
-                    Float getTemp = Float.valueOf(getData.get("temp"));
-                    String getDescription = String.valueOf(getData.get("description"));
-                    Integer getHumidity = Integer.valueOf(getData.get("humidity"));
+                    HashMap<String, String> hash = GetWeather.getInstance().WeatherFromApi(url);
+                    Float getCloudiness = Float.valueOf(hash.get("all"));
+                    Float getTemp = Float.valueOf(hash.get("temp"));
+                    String getDescription = String.valueOf(hash.get("description"));
+                    Integer getHumidity = Integer.valueOf(hash.get("humidity"));
                     System.out.println(getTemp);
-
-                    if (inputString.equals(oldValue)) {
-                        return;
-                    }
-                    if (inputString.isEmpty()) {
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                GetWeather.getInstance().resultLabel(weatherText ,"Введи город!");
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (inputString.equals(oldValue)) {
+                                return;
                             }
-                        });
+                            if (inputString.isEmpty()) {
 
-                    } else {
-                        String cloudsText = "";
+                                GetWeather.getInstance().resultLabel(weatherText, "Введи город!");
 
-                        if (getCloudiness <= 15) {
-                            cloudsText = "Безоблачно";
-                        } else if (getCloudiness < 40) {
-                            cloudsText = "Переменная облачность";
-                        } else if (getCloudiness < 70) {
-                            cloudsText = "Средняя облачность";
-                        } else if (getCloudiness > 70) {
-                            cloudsText = "Пасмурно";
+                            } else {
+
+                                String cloudsText = "";
+
+                                if (getCloudiness <= 15) {
+                                    cloudsText = "Безоблачно";
+                                } else if (getCloudiness < 40) {
+                                    cloudsText = "Переменная облачность";
+                                } else if (getCloudiness < 70) {
+                                    cloudsText = "Средняя облачность";
+                                } else if (getCloudiness > 70) {
+                                    cloudsText = "Пасмурно";
+                                }
+                                GetWeather.getInstance().resultLabel(weatherText, String.format("Погода в городе %s\n%.0f °C\nВлажность воздуха %d\n%s\nОсадки: %s", inputString, getTemp,
+                                        getHumidity, cloudsText, getDescription));
+                            }
+
+                            oldValue = inputString;
                         }
-
-                        String finalCloudsText = cloudsText;
-                        GetWeather.getInstance().resultLabel(weatherText, String.format("Погода в городе %s\n%.0f °C\nВлажность воздуха %d\n%s\nОсадки: %s", inputString, getTemp, getHumidity, finalCloudsText, getDescription));
-                        oldValue = inputString;
-                    }
+                    });
                 } catch (Exception e) {
                     e.printStackTrace();
                     GetWeather.getInstance().resultLabel(weatherText, "Введенный город возможно неверный!");
